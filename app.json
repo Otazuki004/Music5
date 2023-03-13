@@ -1,0 +1,89 @@
+{
+    "name": "Hydra Music Bot",
+    "description": "Telegram bot for Streaming  Music trought the Telegram Group Video Chat, powered by pytgcalls and pyrogram",
+    "logo": "https://telegra.ph/file/b581039c9a18d939d19dd.jpg",
+    "keywords": [
+        "pytgcalls",
+        "telegram bot",
+        "pyrogram"
+    ],
+    "website": "https://t.me/FutureCity005",
+    "repository": "https://github.com/HydraV5TL",
+    "success_url": "https://t.me/BotDuniyaXd",
+    "env": {
+        "API_ID": {
+            "description": "your API_ID from my.telegram.org",
+            "required": true,
+            "value": "10187126"
+        },
+        "API_HASH": {
+            "description": "your API_HASH from my.telegram.org",
+            "required": true,
+            "value": "ff197c0d23d7fe54c89b44ed092c1752"
+        },
+        "BOT_TOKEN": {
+            "description": "your bot token from @BotFather",
+            "required": true,
+            "value": "5401792933:AAFhqJuX2veBDEB5sNJnWCCW0Fp_czoXzbo"
+        },
+        "BOT_USERNAME": {
+            "description": "your bot username from @BotFather",
+            "required": true,
+            "value": "Hydra_100_Bot"
+        },
+        "BOT_NAME": {
+            "description": "fill with your bot name from @BotFather",
+            "required": true,
+            "value": "Hydra"
+        },
+        "ASSISTANT_NAME": {
+            "description": "fill with the assistant username account without @",
+            "required": false,
+            "value": "Itz_Otazuki"
+        },
+        "SESSION_NAME": {
+            "description": "fill with the pyrogram String Session",
+            "required": true,
+            "value": "BQCiamf_7Akr68SPFbfs6hUj2vVJ-Ur8vWLhZn1tyUlet5HCekyM6VS7i9D1_x1IqsRcum13llI8BCwXCJuNpdwGJc7ncPt-xF5RRfr1GBFi-fX8LyRkodDyq7bG11XjgnvwYABOzvSanfCR9wlKLwYgQPMUkOaDOIhjJiFwmo7dRbBEHtw1uLe-6v7MjRmICqqyeRhmRwKmIZU3SUBfrD4U1fqur6GR6Hj-SqbI2It-bduOsz4CfbXcrG7FUTC8zDnSVx6-AHAzNRNQcFW-_lTnpTF6tNTsD_YYrR3ZcvRmGawJm_dAnCMJ_LcTjhIk2RLcWBYziraSMQbjBuDpjO1SAAAAAVVeZB0A"
+        },
+        "SUDO_USERS": {
+            "description": "list of user ids to be added to sudo member list, or just fill with your id",
+            "required": true,
+            "value": "1985665341"
+        },
+        "GROUP_SUPPORT": {
+            "description": "if you have group, then fill the group username here without @",
+            "required": false,
+            "value": "FutureCity005"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "if you have channel, then fill the channel username here without @",
+            "required": false,
+            "value": "Updates004"
+        },
+        "OWNER_NAME": {
+            "description": "fill with your telegram account username without @",
+            "required": false,
+            "value": "Otazuki_004"
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    },
+    "stack": "container"
+    }
