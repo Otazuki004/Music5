@@ -167,11 +167,11 @@ async def play(c: Client, m: Message):
         if len(m.command) < 2:
          await m.reply_photo(
                      photo=f"{IMG_5}",
-                    caption="**Usage: /play Give a Title Song To Play Music or /vplay for Video Play**",
+                    caption="**Usage: /play Give a Title Song To Play Music**",
                       reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("• Support", url=f"https://t.me/BotDuniyaXd"),
+                            InlineKeyboardButton("• Support", url=f"https://t.me/FutureCity005"),
                             InlineKeyboardButton("• Close", callback_data="cls")
                         ]
                     ]
@@ -179,7 +179,7 @@ async def play(c: Client, m: Message):
             )
         else:
             suhu = await m.reply_text(
-        f"**𝗖𝗿𝗼𝘄 Downloading**\n\n100% ▓▓▓▓▓▓▓▓▓▓▓▓ 00%"
+        f"**🔎Finding song**"
     )
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
@@ -200,7 +200,7 @@ async def play(c: Client, m: Message):
                 playimg = await play_thumb(videoid)
                 queueimg = await queue_thumb(videoid)
                 await suhu.edit(
-                            f"**𝙉𝙪𝙡𝙡 Downloader**\n\n**Title**: {title[:22]}\n\n100% ▓▓▓▓▓▓▓▓▓▓▓▓0%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
+                            f"**Downloading {title[:22]}**"
                         )
                 format = "bestaudio"
                 abhi, ytlink = await ytdl(format, url)
@@ -221,7 +221,7 @@ async def play(c: Client, m: Message):
                     else:
                         try:
                             await suhu.edit(
-                            f"**𝙉𝙪𝙡𝙡 Downloader**\n\n**Title**: {title[:22]}\n\n0% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
+                            f"**Download Complete Now Streaming**"
                         )
                             await call_py.join_group_call(
 
