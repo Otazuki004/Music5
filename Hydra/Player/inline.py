@@ -56,7 +56,7 @@ async def inline(client: Client, query: InlineQuery):
             input_message_content=InputTextMessageContent("/skip"),
         ),
         InlineQueryResultArticle(
-            title="End Stream",
+            title="Stop Stream",
             description="Stop the ongoing playout on group call.",
             thumb_url="https://telegra.ph/file/d2eb03211baaba8838cc4.png",
             input_message_content=InputTextMessageContent("/stop"),
@@ -69,7 +69,7 @@ async def inline(client: Client, query: InlineQuery):
         await client.answer_inline_query(
             query.id,
             results=answerss,
-            switch_pm_text="Type The Name Of The Song/Video YouTube...",
+            switch_pm_text="Menu",
             switch_pm_parameter="help",
             cache_time=0,
         )
