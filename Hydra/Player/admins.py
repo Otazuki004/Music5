@@ -90,7 +90,7 @@ async def skip(client, m: Message):
 
 
 @Client.on_message(
-    command(["stop", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
+    command(["stops", f"stops@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
     & other_filters
 )
 @authorized_users_only
@@ -100,7 +100,7 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("✅ The userbot has disconnected from the video chat.")
+            await m.reply(f"**Userbot Successfully left In VC✅**")
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
